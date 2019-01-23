@@ -27,3 +27,19 @@ $.getJSON("model/eventos_listar.php", function (dados) {
     }); //fim do forEach
 
 }); //fim do getJSON
+
+$("#btn-salvar").click(function(){
+    $("#form-eventos").submit();
+});
+
+//formata data no input
+$("#input-datahora").datepicker({
+    format: "dd/mm/yyyy",
+    startDate: "today",
+    language: "pt-BR",
+    todayHighlight: true
+});
+
+//mascara do valor do preço
+
+$("#input-preco").mask('000.000.000.000.000,00', {reverse: true});

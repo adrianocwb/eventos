@@ -1,14 +1,10 @@
 <?php
 
+require_once "con.php";
+
 header("Content-type: application/json");
 
-$server = "localhost";
-$user = "root";
-$senha = "elaborata";
-$banco = "eventos";
-$dsn = "mysql:host=$server;dbname=$banco;charset=utf8";
-
-$con = new \PDO($dsn, $user, $senha);
+$con = conectar ();
 
 $sql = "SELECT * FROM eventos ORDER BY datahora ASC";
 
