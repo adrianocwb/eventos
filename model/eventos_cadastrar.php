@@ -19,4 +19,10 @@ $sql = "INSERT INTO eventos
         '$descricao', 
         '$preco')
     ";
-echo $sql;    
+
+if ($con->exec($sql))
+{
+    echo 'true';
+} else {
+    echo 'false';
+}

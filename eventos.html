@@ -92,7 +92,9 @@
                     Cadastrar Novo
                 </button>
               </div>
-
+              <div id="alert-cadastro" style="display:none" class="alert alert-success" role="alert">
+                Evento cadastrado com sucesso!
+              </div>
                 <div class="table-responsive">
                     <table class="table table-striped table-sm">
                         <thead>
@@ -130,7 +132,7 @@
 
             <div class="form-group">
                 <label class="control-label">Nome no Evento</label>
-                <input type="text" class="form-control" name="nome" />
+                <input id="input-nome"type="text" class="form-control" name="nome" />
             </div>
 
             <div class="form-group">
@@ -140,12 +142,12 @@
 
             <div class="form-group">
                 <label class="control-label">Local</label>
-                <input type="text" class="form-control" name="local" />
+                <input id="input-local"type="text" class="form-control" name="local" />
             </div>
 
             <div class="form-group">
                 <label class="control-label">Descrição</label>
-                <textarea class="form-control" name="descricao"></textarea>
+                <textarea id="text-descricao"class="form-control" name="descricao"></textarea>
             </div>
 
             <div class="form-group">
