@@ -4,7 +4,7 @@ require_once "con.php";
 
 header("Content-type: application/json");
 
-$con = conectar ();
+$con = conectar();
 
 $sql = "SELECT * FROM eventos ORDER BY datahora ASC";
 

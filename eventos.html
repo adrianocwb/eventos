@@ -7,12 +7,12 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-
+    
     <title>Admin - Eventos</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-datepicker3.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet" >
+    <link href="css/bootstrap-datepicker3.css" rel="stylesheet" >
 
 
     <style>
@@ -38,8 +38,8 @@
 
 <body>
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Company name</a>
-        <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Admin - Eventos</a>
+        
         <ul class="navbar-nav px-3">
             <li class="nav-item text-nowrap">
                 <a class="nav-link" href="#">Sign out</a>
@@ -59,7 +59,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="eventos.html">
+                            <a class="nav-link" href="#">
                                 <span data-feather="file"></span>
                                 Eventos
                             </a>
@@ -76,33 +76,37 @@
                                 Clientes
                             </a>
                         </li>
-
+                        
                     </ul>
 
-
+                    
+                    
                 </div>
             </nav>
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                
+              <div style="margin:20px;">
+                <h2 class="titulo">Listagem de Eventos</h2>
+                <button class="btn btn-success" data-toggle="modal" data-target="#cadastrar-evento">
+                    Cadastrar Novo
+                </button>
+              </div>
 
-                <div>
-                    <h2 class="titulo">Listagem de eventos</h2>
-
-                    <button class="btn btn-success" data-toggle="modal" data-target="#cadastrar-evento">Cadastrar Novo</button>
-                </div>
                 <div class="table-responsive">
                     <table class="table table-striped table-sm">
                         <thead>
                             <tr>
                                 <th>Id</th>
                                 <th>Nome</th>
-                                <th>Data-Hora</th>
+                                <th>Data - Hora</th>
                                 <th>Local</th>
                                 <th>Ações</th>
                             </tr>
                         </thead>
                         <tbody id="lista-eventos">
-                            </tr>
+                           
+                            
                         </tbody>
                     </table>
                 </div>
@@ -111,59 +115,64 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="cadastrar-evento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Novo Evento</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form id="form-eventos" action="model/eventos_cadastrar.php" method="POST">
-
-                        <div class="form-group">
-                            <label class="control-label">Nome do Evento</label>
-                            <input type="text" class="form-control" name="nome" />
-
-                        </div>
-
-                        <div class="form-group">
-                            <label class="control-label">Data e Hora</label>
-                            <input id="input-datahora" type="text" class="form-control" name="datahora" />
-
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Local</label>
-                            <input  type="text" class="form-control" name="local" />
-
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Descrição</label>
-                            <textarea class="form-control" name="descricao"> </textarea>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Preço</label>
-                            <input  id="input-preco" type="text" class="form-control" name="preco" />
-                    </form>
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button id="btn-salvar" type="submit" class="btn btn-primary">Salvar</button>
-                </div>
-            </div>
+<div class="modal fade" id="cadastrar-evento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Novo Evento</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
+        <div class="modal-body">
+          
+        <form id="form-eventos" action="model/eventos_cadastrar.php" method="POST">
+
+            <div class="form-group">
+                <label class="control-label">Nome no Evento</label>
+                <input type="text" class="form-control" name="nome" />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Data e Hora</label>
+                <input id="input-datahora" type="text" class="form-control" name="datahora" />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Local</label>
+                <input type="text" class="form-control" name="local" />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Descrição</label>
+                <textarea class="form-control" name="descricao"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Preço</label>
+                <input id="input-preco" type="text" class="form-control" name="preco" />
+            </div>
+           
+
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button id="btn-salvar" type="submit" class="btn btn-primary">Salvar</button>
+        </div>
+      </div>
     </div>
+  </div>
 
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
     <script type="text/javascript" src="locales/bootstrap-datepicker.pt-BR.min.js"></script>
     <script type="text/javascript" src="js/jquery.mask.js"></script>
+
     <script type="text/javascript" src="js/eventos.js"></script>
+    
 </body>
 
 </html>

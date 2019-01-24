@@ -1,4 +1,4 @@
--- Sistema de Eventos --
+= Sistema de Eventos =
 
 * Controle de usuarios
 * opção de busca
